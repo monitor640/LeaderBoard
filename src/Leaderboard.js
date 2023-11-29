@@ -51,7 +51,7 @@ function Leaderboard() {
             <tr key={index}>
                 <td>{item.rank}</td>
                 <td> <img src={item.user.twitterImage}/></td>
-                <td><a href={concatTwitterHandle(item)}>{item.user.twitterHandle}</a></td>
+                <td><a href={concatTwitterHandle(item)} target="_blank">{item.user.twitterHandle}</a></td>
                 <td>{item.currentLevel}</td>
                 <td>{item.points}</td>
             </tr>
@@ -67,7 +67,7 @@ function Leaderboard() {
                         <tr>
                             <th>Rank</th>
                             <th></th>
-                            <th></th>
+                            <th>Twitter Handle</th>
                             <th>Level</th>
                             <th>Score</th>
                         </tr>
@@ -76,14 +76,6 @@ function Leaderboard() {
                         {DisplayLeaderboard}
                     </tbody>
                 </Table>
-
-                {leaderboardData.map((item, index) => (
-                    <div key={index}>
-                        <h1>{item.rank}</h1>
-                        <h2>{item.user.twitterHandle}</h2>
-                        <h3>{item.points}</h3>
-                    </div>
-                ))}
 
             </div>
         </div>
