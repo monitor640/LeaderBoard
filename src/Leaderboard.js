@@ -60,9 +60,9 @@ function Leaderboard() {
 
     return (
         <div>
-            <h1>Leaderboard</h1>
+            <h1>Portalcoin Leaderboard</h1>
             <div>
-                <Table striped bordered hover>
+                <Table>
                     <thead>
                         <tr>
                             <th>Rank</th>
