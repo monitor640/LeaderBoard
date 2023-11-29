@@ -43,6 +43,8 @@ function Leaderboard() {
                 {leaderboard.map((item, index) => (
                     <div key={index}>
                         <h1>{item.rank}</h1>
+                        <h2>{item.user.twitterHandle}</h2>
+                        <h3>{item.points}</h3>
                     </div>
                 ))}
             </div>
