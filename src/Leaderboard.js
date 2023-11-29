@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Table from 'react-bootstrap/Table';
 
 
 function Leaderboard() {
@@ -36,18 +37,58 @@ function Leaderboard() {
         );
     }
 
+    function concatTwitterHandle(item) {
+        return "https://www.twitter.com/"+item.user.twitterHandle;
+    }
+
+    const DisplayLeaderboard = leaderboard.map((item, index) => {
+        return (
+            <tr key={index}>
+                <td>{item.rank}</td>
+                <td> <img src={item.user.twitterImage}/></td>
+                <td><a href={concatTwitterHandle(item)}>{item.user.twitterHandle}</a></td>
+                <td>{item.currentLevel}</td>
+                <td>{item.points}</td>
+            </tr>
+        );
+    });
+
     return (
         <div>
             <h1>Leaderboard</h1>
             <div>
-                {leaderboard.map((item, index) => (
-                    <div key={index}>
-                        <h1>{item.rank}</h1>
-                    </div>
-                ))}
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th></th>
+                            <th></th>
+                            <th>Level</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {DisplayLeaderboard}
+                    </tbody>
+                </Table>
             </div>
         </div>
     );
+    // return (
+    //     <div>
+    //         <h1>Leaderboard</h1>
+    //         <div>
+    //             {leaderboard.map((item, index) => (
+    //                 <div key={index}>
+    //                     <Table striped bordered hover>
+    //
+    //
+    //                     </Table>
+    //                 </div>
+    //             ))}
+    //         </div>
+    //     </div>
+    // );
 }
 
 export default Leaderboard;
