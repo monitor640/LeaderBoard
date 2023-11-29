@@ -3,7 +3,7 @@
 This application is a simple React front-end application showing the current top 100 leaders in its Airdrop farming.
 
 Read more:
-https://twitter.com/Portalcoin
+https://twitter.com/Portalcoin  
 https://twitter.com/Portalcoin/status/1729198571998843358?s=20
 
 
