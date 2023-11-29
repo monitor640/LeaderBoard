@@ -1,6 +1,6 @@
 # Portalcoin Leaderboard
 
-This application is a simple React front-end application showing the current top 100 leaders in its Airdrop farming.
+This application is a simple React front-end application showing the current top 100 leaders in Portal leaderboard. 
 
 Read more:  
 https://twitter.com/Portalcoin  
